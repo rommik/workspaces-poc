@@ -1,17 +1,5 @@
 {
-  "compilerOptions": {
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
-    "moduleResolution": "node",
-
-    "declaration": true,
-    "declarationMap": true,
-    "sourceMap": true,
-
-    "importHelpers": true,
-    "composite": true,
-    "target": "es5"
-  },
+ 
   "references": [
     {
       "path": "./packages/lib1"
