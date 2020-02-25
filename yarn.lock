@@ -284,6 +284,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "lib2@workspace:packages/lib2"
   dependencies:
+    lib1: "workspace:packages/lib1"
+    ts-node: ^8.6.2
     typescript: ^3.8.2
   languageName: unknown
   linkType: soft

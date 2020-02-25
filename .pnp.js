@@ -390,6 +390,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./packages/lib2/",
           "packageDependencies": [
             ["lib2", "workspace:packages/lib2"],
+            ["lib1", "workspace:packages/lib1"],
+            ["ts-node", "virtual:ac55d8adee0cb0a6097c52c66a39fd9b11e019b0e22fbb123ab771c8c10af1cd79cc95e76478d8dfad59fcebb50a70e6e157f8ea9496cf913dc12ca87d8b5ab1#npm:8.6.2"],
             ["typescript", "patch:typescript@npm%3A3.8.2#builtin<compat/typescript>::version=3.8.2&hash=273569"]
           ],
           "linkType": "SOFT",
