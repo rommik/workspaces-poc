@@ -1,7 +1,17 @@
 {
-    "files": [],
-    "include": [],
-    "exclude": [
-      "**/node_modules"
-    ]
-  }
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "moduleResolution": "node",
+
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+
+    "importHelpers": true,
+    "target": "es5"
+  },
+  "files": [],
+  "include": [],
+  "exclude": ["**/node_modules"]
+}
