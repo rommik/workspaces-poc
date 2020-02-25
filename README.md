@@ -27,3 +27,12 @@ yarn exposes extra functionality via plugins.
 Will allow you to
 
 `yarn workspaces foreach command` to do something on every workspace.
+
+
+# POC Goals.
+
+This POC attempts to evaluate these requirements:
+
+1. Ability to store multiple projects (a.k.a packages) in one repository.
+2. Ability to build, test, and publish/release all projects with one command or individual projects as needed.
+3. Ability to increment versions for all projects or per individual project.
