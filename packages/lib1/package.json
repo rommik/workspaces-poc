@@ -2,5 +2,12 @@
   "name": "lib1",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "dev": "ts-node src/index.ts"
+  },
+  "dependencies": {
+    "ts-node": "^8.6.2",
+    "typescript": "^3.8.2"
+  }
 }
