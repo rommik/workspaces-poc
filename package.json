@@ -4,5 +4,7 @@
   "main": "index.js",
   "repository": "https://github.com/rommik/workspaces-poc.git",
   "author": "Roman Mikhailov <roman.mikhailov@barco.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "private":true,
+  "workspaces":["packages/*"]
 }
