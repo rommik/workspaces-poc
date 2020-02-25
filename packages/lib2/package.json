@@ -3,7 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "dev": "ts-node src/index.ts"
+  },
   "dependencies": {
+    "lib1": "workspace:packages/lib1",
+    "ts-node": "^8.6.2",
     "typescript": "^3.8.2"
   }
 }
