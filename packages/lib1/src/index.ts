@@ -1,5 +1,3 @@
-const Foo = () => {
-  return "hello world";
-};
+import Foo from './foo';
 
-export default Foo;
+console.log(Foo());
