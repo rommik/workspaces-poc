@@ -5,6 +5,11 @@
   "repository": "https://github.com/rommik/workspaces-poc.git",
   "author": "Roman Mikhailov <roman.mikhailov@barco.com>",
   "license": "MIT",
-  "private":true,
-  "workspaces":["packages/*"]
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "dependencies": {
+    "typescript": "^3.8.2"
+  }
 }
