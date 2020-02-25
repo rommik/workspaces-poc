@@ -9,8 +9,14 @@
     "sourceMap": true,
 
     "importHelpers": true,
+    "composite": true,
     "target": "es5"
   },
+  "references": [
+    {
+      "path": "./packages/lib1"
+    }
+  ],
   "files": [],
   "include": [],
   "exclude": ["**/node_modules"]

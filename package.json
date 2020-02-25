@@ -9,6 +9,9 @@
   "workspaces": [
     "packages/*"
   ],
+  "scripts": {
+    "compile": "tsc --build --force tsconfig.json",
+  },
   "dependencies": {
     "typescript": "^3.8.2"
   }
