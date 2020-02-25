@@ -3,6 +3,9 @@
   "references": [
     {
       "path": "./packages/lib1"
+    },
+    {
+      "path": "./packages/lib2"
     }
   ],
   "files": [],
