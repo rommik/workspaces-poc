@@ -1,0 +1,8 @@
+{
+  "name": "workspaces-poc",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/rommik/workspaces-poc.git",
+  "author": "Roman Mikhailov <roman.mikhailov@barco.com>",
+  "license": "MIT"
+}
