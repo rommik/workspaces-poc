@@ -1,0 +1,9 @@
+# Taskfile used for running scripts
+- name: build
+  tasks:
+    - yarn compile
+    - echo "hello World"
+- name: docker
+  tasks:
+    - docker -v
+    - docker ps
