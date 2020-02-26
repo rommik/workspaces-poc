@@ -1,0 +1,4 @@
+releases:
+  lib1: minor
+  lib2: minor
+  workspaces-poc: minor
