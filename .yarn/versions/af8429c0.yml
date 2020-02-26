@@ -1,6 +1,5 @@
 releases:
-  lib1: patch
-  lib2: patch
+
 
 undecided:
   - workspaces-poc
