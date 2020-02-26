@@ -19,15 +19,17 @@ According to Yarn, it is not recommended to install `yarn2` as global.
 `yarn workspace <workspace> command` to do something in a workspace. (e.g `yarn workspace lib1 add lodash` will add lodash dependency to lib1)
 
 ## Plugins
-
 yarn exposes extra functionality via plugins.
 
-`yarn plugin import workspace-tools` will install workspace-tools plugin.
+### Workspace-tools
 
-Will allow you to
+`yarn plugin import workspace-tools` will install workspace-tools plugin. It will allow you to
 
 `yarn workspaces foreach command` to do something on every workspace.
 
+### Version
+
+The `version` plugin allows to change package version for the project and packages.
 
 # POC Goals.
 
