@@ -11,7 +11,7 @@
     "packages/lib2"
   ],
   "scripts": {
-    "taskfile:build":"taskfile build",
+    "taskfile:build": "taskfile build",
     "compile": "tsc --build --force tsconfig.json"
   },
   "dependencies": {
