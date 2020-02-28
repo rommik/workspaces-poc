@@ -16,4 +16,6 @@
   tasks:
     - echo "Attempting to stop Verdaccio "
     - docker stop $(docker ps -f "name=verdaccio" -q) 
-    
+- name: npm-set-verdaccio
+  tasks:
+    - npm set registry http://localhost:4873

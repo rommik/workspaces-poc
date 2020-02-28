@@ -8,15 +8,18 @@
   "private": true,
   "workspaces": [
     "packages/lib1",
-    "packages/lib2"
+    "packages/lib2",
+    "packages/web"
   ],
   "scripts": {
+    "taskfile:npm-set-verdaccio": "taskfile npm-set-verdaccio",
     "taskfile:build": "taskfile build",
-    "taskfile:verdaccio-start":"taskfile verdaccio-start",
-    "taskfile:verdaccio-stop":"taskfile verdaccio-stop",
+    "taskfile:verdaccio-start": "taskfile verdaccio-start",
+    "taskfile:verdaccio-stop": "taskfile verdaccio-stop",
     "compile": "tsc --build --force tsconfig.json"
   },
   "dependencies": {
+    "lodash": "^4.17.15",
     "typescript": "^3.8.2"
   },
   "devDependencies": {

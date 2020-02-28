@@ -29,6 +29,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       {
         "name": "@rommi/lib2",
         "reference": "workspace:packages/lib2"
+      },
+      {
+        "name": "web",
+        "reference": "workspace:packages/web"
       }
     ],
     "enableTopLevelFallback": true,
@@ -36,6 +40,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
     "fallbackExclusionList": [
       ["@rommi/lib1", ["workspace:packages/lib1"]],
       ["@rommi/lib2", ["workspace:packages/lib2"]],
+      ["web", ["workspace:packages/web"]],
       ["workspaces-poc", ["workspace:."]]
     ],
     "locationBlacklistData": [
@@ -1047,6 +1052,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["utila", "npm:0.4.0"]
           ],
           "linkType": "HARD",
+        }]
+      ]],
+      ["web", [
+        ["workspace:packages/web", {
+          "packageLocation": "./packages/web/",
+          "packageDependencies": [
+            ["web", "workspace:packages/web"],
+            ["@rommi/lib2", "workspace:packages/lib2"],
+            ["typescript", "patch:typescript@npm%3A3.8.2#builtin<compat/typescript>::version=3.8.2&hash=273569"]
+          ],
+          "linkType": "SOFT",
         }]
       ]],
       ["which", [
