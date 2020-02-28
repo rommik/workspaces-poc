@@ -4,6 +4,27 @@
 __metadata:
   version: 4
 
+"@rommi/lib1@workspace:packages/lib1":
+  version: 0.0.0-use.local
+  resolution: "@rommi/lib1@workspace:packages/lib1"
+  dependencies:
+    lodash: ^4.17.15
+    ts-node: ^8.6.2
+    typescript: ^3.8.2
+  languageName: unknown
+  linkType: soft
+
+"@rommi/lib2@workspace:packages/lib2":
+  version: 0.0.0-use.local
+  resolution: "@rommi/lib2@workspace:packages/lib2"
+  dependencies:
+    "@rommi/lib1": "workspace:packages/lib1"
+    lodash: ^4.17.15
+    ts-node: ^8.6.2
+    typescript: ^3.8.2
+  languageName: unknown
+  linkType: soft
+
 "ansi-escapes@npm:^3.2.0":
   version: 3.2.0
   resolution: "ansi-escapes@npm:3.2.0"
@@ -411,26 +432,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lib1@workspace:packages/lib1":
-  version: 0.0.0-use.local
-  resolution: "lib1@workspace:packages/lib1"
-  dependencies:
-    ts-node: ^8.6.2
-    typescript: ^3.8.2
-  languageName: unknown
-  linkType: soft
-
-"lib2@workspace:packages/lib2":
-  version: 0.0.0-use.local
-  resolution: "lib2@workspace:packages/lib2"
-  dependencies:
-    lib1: "workspace:packages/lib1"
-    ts-node: ^8.6.2
-    typescript: ^3.8.2
-  languageName: unknown
-  linkType: soft
-
-"lodash@npm:^4.17.11":
+"lodash@npm:^4.17.11, lodash@npm:^4.17.15":
   version: 4.17.15
   resolution: "lodash@npm:4.17.15"
   checksum: 2/aec3fbb7570aa67bda500b8299b1b1821d60646bede87f76a74dfcc7666ab3445267d734ec71424d70809d52ad67a1356fab5ab694a3faa1908d68e9d48f00f5
@@ -846,9 +848,9 @@ __metadata:
   linkType: hard
 
 "tslib@npm:^1.9.0":
-  version: 1.11.0
-  resolution: "tslib@npm:1.11.0"
-  checksum: 2/fa014c310808080e07b14d33aa52a3c8c8038f25fd7164a8e7d038fd6f2ca767b5a9305c77147d7d59ccd93bdf7a461a3c1d7ae53dfaca43501a2623834def97
+  version: 1.11.1
+  resolution: "tslib@npm:1.11.1"
+  checksum: 2/d40eba08de267b2d3c458ddbf51f9010a45b8e752d3bf8c0fed63e266afc9277c6a26e65e51223335b8753f9f106aeb600e704f2a6eae05729160671a97c52e7
   languageName: node
   linkType: hard
 
@@ -901,6 +903,7 @@ typescript@^3.8.2:
   version: 0.0.0-use.local
   resolution: "workspaces-poc@workspace:."
   dependencies:
+    lodash: ^4.17.15
     taskfile: ^0.10.0
     typescript: ^3.8.2
   languageName: unknown

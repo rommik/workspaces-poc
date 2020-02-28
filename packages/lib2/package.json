@@ -1,5 +1,5 @@
 {
-  "name": "lib2",
+  "name": "@rommi/lib2",
   "version": "1.0.1",
   "main": "index.js",
   "license": "MIT",
@@ -7,7 +7,8 @@
     "dev": "ts-node src/index.ts"
   },
   "dependencies": {
-    "lib1": "workspace:packages/lib1",
+    "@rommi/lib1": "workspace:packages/lib1",
+    "lodash": "^4.17.15",
     "ts-node": "^8.6.2",
     "typescript": "^3.8.2"
   }

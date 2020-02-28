@@ -23,19 +23,19 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:."
       },
       {
-        "name": "lib1",
+        "name": "@rommi/lib1",
         "reference": "workspace:packages/lib1"
       },
       {
-        "name": "lib2",
+        "name": "@rommi/lib2",
         "reference": "workspace:packages/lib2"
       }
     ],
     "enableTopLevelFallback": true,
     "ignorePatternData": "(^(?:\\.vscode\\/pnpify(?:\\/(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)|$))$)",
     "fallbackExclusionList": [
-      ["lib1", ["workspace:packages/lib1"]],
-      ["lib2", ["workspace:packages/lib2"]],
+      ["@rommi/lib1", ["workspace:packages/lib1"]],
+      ["@rommi/lib2", ["workspace:packages/lib2"]],
       ["workspaces-poc", ["workspace:."]]
     ],
     "locationBlacklistData": [
@@ -45,7 +45,33 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {
           "packageLocation": "./",
           "packageDependencies": [
+            ["lodash", "npm:4.17.15"],
             ["taskfile", "npm:0.10.0"],
+            ["typescript", "patch:typescript@npm%3A3.8.2#builtin<compat/typescript>::version=3.8.2&hash=273569"]
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
+      ["@rommi/lib1", [
+        ["workspace:packages/lib1", {
+          "packageLocation": "./packages/lib1/",
+          "packageDependencies": [
+            ["@rommi/lib1", "workspace:packages/lib1"],
+            ["lodash", "npm:4.17.15"],
+            ["ts-node", "virtual:c13120b7fb6523babe1a00a90339e3522b42a86d3e80e8b2884ee52bf1e0d66392d436f62aa76531506221970657cba9e3f01ac42a620083bcfcd5a8eb7e857f#npm:8.6.2"],
+            ["typescript", "patch:typescript@npm%3A3.8.2#builtin<compat/typescript>::version=3.8.2&hash=273569"]
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
+      ["@rommi/lib2", [
+        ["workspace:packages/lib2", {
+          "packageLocation": "./packages/lib2/",
+          "packageDependencies": [
+            ["@rommi/lib2", "workspace:packages/lib2"],
+            ["@rommi/lib1", "workspace:packages/lib1"],
+            ["lodash", "npm:4.17.15"],
+            ["ts-node", "virtual:c13120b7fb6523babe1a00a90339e3522b42a86d3e80e8b2884ee52bf1e0d66392d436f62aa76531506221970657cba9e3f01ac42a620083bcfcd5a8eb7e857f#npm:8.6.2"],
             ["typescript", "patch:typescript@npm%3A3.8.2#builtin<compat/typescript>::version=3.8.2&hash=273569"]
           ],
           "linkType": "SOFT",
@@ -514,29 +540,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
-      ["lib1", [
-        ["workspace:packages/lib1", {
-          "packageLocation": "./packages/lib1/",
-          "packageDependencies": [
-            ["lib1", "workspace:packages/lib1"],
-            ["ts-node", "virtual:ac55d8adee0cb0a6097c52c66a39fd9b11e019b0e22fbb123ab771c8c10af1cd79cc95e76478d8dfad59fcebb50a70e6e157f8ea9496cf913dc12ca87d8b5ab1#npm:8.6.2"],
-            ["typescript", "patch:typescript@npm%3A3.8.2#builtin<compat/typescript>::version=3.8.2&hash=273569"]
-          ],
-          "linkType": "SOFT",
-        }]
-      ]],
-      ["lib2", [
-        ["workspace:packages/lib2", {
-          "packageLocation": "./packages/lib2/",
-          "packageDependencies": [
-            ["lib2", "workspace:packages/lib2"],
-            ["lib1", "workspace:packages/lib1"],
-            ["ts-node", "virtual:ac55d8adee0cb0a6097c52c66a39fd9b11e019b0e22fbb123ab771c8c10af1cd79cc95e76478d8dfad59fcebb50a70e6e157f8ea9496cf913dc12ca87d8b5ab1#npm:8.6.2"],
-            ["typescript", "patch:typescript@npm%3A3.8.2#builtin<compat/typescript>::version=3.8.2&hash=273569"]
-          ],
-          "linkType": "SOFT",
-        }]
-      ]],
       ["lodash", [
         ["npm:4.17.15", {
           "packageLocation": "./.yarn/cache/lodash-npm-4.17.15-566d9324f7-2.zip/node_modules/lodash/",
@@ -759,7 +762,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/rxjs-npm-6.5.4-8c1301c00a-2.zip/node_modules/rxjs/",
           "packageDependencies": [
             ["rxjs", "npm:6.5.4"],
-            ["tslib", "npm:1.11.0"]
+            ["tslib", "npm:1.11.1"]
           ],
           "linkType": "HARD",
         }]
@@ -993,10 +996,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["ts-node", [
-        ["virtual:ac55d8adee0cb0a6097c52c66a39fd9b11e019b0e22fbb123ab771c8c10af1cd79cc95e76478d8dfad59fcebb50a70e6e157f8ea9496cf913dc12ca87d8b5ab1#npm:8.6.2", {
-          "packageLocation": "./.yarn/$$virtual/ts-node-virtual-0e8a72d19f/0/cache/ts-node-npm-8.6.2-c2717958b1-2.zip/node_modules/ts-node/",
+        ["virtual:c13120b7fb6523babe1a00a90339e3522b42a86d3e80e8b2884ee52bf1e0d66392d436f62aa76531506221970657cba9e3f01ac42a620083bcfcd5a8eb7e857f#npm:8.6.2", {
+          "packageLocation": "./.yarn/$$virtual/ts-node-virtual-d2b909af2a/0/cache/ts-node-npm-8.6.2-c2717958b1-2.zip/node_modules/ts-node/",
           "packageDependencies": [
-            ["ts-node", "virtual:ac55d8adee0cb0a6097c52c66a39fd9b11e019b0e22fbb123ab771c8c10af1cd79cc95e76478d8dfad59fcebb50a70e6e157f8ea9496cf913dc12ca87d8b5ab1#npm:8.6.2"],
+            ["ts-node", "virtual:c13120b7fb6523babe1a00a90339e3522b42a86d3e80e8b2884ee52bf1e0d66392d436f62aa76531506221970657cba9e3f01ac42a620083bcfcd5a8eb7e857f#npm:8.6.2"],
             ["arg", "npm:4.1.3"],
             ["diff", "npm:4.0.2"],
             ["make-error", "npm:1.3.6"],
@@ -1011,10 +1014,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["tslib", [
-        ["npm:1.11.0", {
-          "packageLocation": "./.yarn/cache/tslib-npm-1.11.0-3c1da23193-2.zip/node_modules/tslib/",
+        ["npm:1.11.1", {
+          "packageLocation": "./.yarn/cache/tslib-npm-1.11.1-8e4faed70f-2.zip/node_modules/tslib/",
           "packageDependencies": [
-            ["tslib", "npm:1.11.0"]
+            ["tslib", "npm:1.11.1"]
           ],
           "linkType": "HARD",
         }]
@@ -1061,6 +1064,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",
           "packageDependencies": [
             ["workspaces-poc", "workspace:."],
+            ["lodash", "npm:4.17.15"],
             ["taskfile", "npm:0.10.0"],
             ["typescript", "patch:typescript@npm%3A3.8.2#builtin<compat/typescript>::version=3.8.2&hash=273569"]
           ],
