@@ -7,3 +7,13 @@
   tasks:
     - docker -v
     - docker ps
+- name: verdaccio-start
+  tasks:
+    - echo "Attempting to start Verdaccio on port 4873"
+    - docker run -d -it --rm --name verdaccio -p 4873:4873 verdaccio/verdaccio
+    - echo "Verdaccio started on port 4873"
+- name: verdaccio-stop
+  tasks:
+    - echo "Attempting to stop Verdaccio "
+    - docker stop $(docker ps -f "name=verdaccio" -q) 
+    
