@@ -1,0 +1,21 @@
+# Taskfile used for running scripts
+- name: build
+  tasks:
+    - yarn compile
+    - echo "hello World"
+- name: docker
+  tasks:
+    - docker -v
+    - docker ps
+- name: verdaccio-start
+  tasks:
+    - echo "Attempting to start Verdaccio on port 4873"
+    - docker run -d -it --rm --name verdaccio -p 4873:4873 verdaccio/verdaccio
+    - echo "Verdaccio started on port 4873"
+- name: verdaccio-stop
+  tasks:
+    - echo "Attempting to stop Verdaccio "
+    - docker stop $(docker ps -f "name=verdaccio" -q) 
+- name: npm-set-verdaccio
+  tasks:
+    - npm set registry http://localhost:4873
